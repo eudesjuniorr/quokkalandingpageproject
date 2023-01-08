@@ -218,4 +218,7 @@ body {
         height: 0px;
         width: 0px;
     }
+    .titulo-do-conteudo-secundario{
+        text-align: center;
+    }
 }
