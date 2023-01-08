@@ -1,0 +1,221 @@
+@charset "UFT-8";
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Sarala:wght@400;700&display=swap');
+
+/* início da estilização */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background-color: white;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.imagem-cabecalho {
+    height: 62px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.imagem-cabecalho:hover {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotate(360deg);
+}
+
+.menu-cabecalho {
+    display: flex;
+    gap: 32px;
+}
+
+.item-menu-cabecalho {
+    font-family: 'Sarala', sans-serif;
+    color: #033D4E;
+    font-weight: 400;
+    font-size: 18px;
+    width: 65px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.item-menu-cabecalho:hover {
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+
+.conteudo-principal-do-corpo {
+    display: flex;
+    flex-direction: column;
+    border-top: 0.4px solid #A8B7414D;
+    padding-top: 24px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textos-conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.titulo-conteudo-principal {
+    display: flex;
+    justify-content: center;
+    font-family: 'Modak', cursive;
+    font-weight: 400;
+    font-size: 74px;
+    color: #033D4E;
+}
+
+.subtitulo-conteudo-principal {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: -20px;
+    color: #033D4E;
+    text-align: center;
+}
+
+.imagens-corpo-principal {
+    display: flex;
+    justify-content: center;
+    width: 40em;
+    margin-top: 48px;
+}
+
+.tamanho-imagens {
+    width: 40%;
+    border-radius: 20px;
+    padding: 5px;
+    border: #A8B7414D solid 0px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.tamanho-imagens:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.conteudo-secundario-do-corpo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 58px;
+    margin-bottom: 58px;
+}
+
+.titulo-do-conteudo-secundario {
+    border-top: 0.4px solid #A8B7414D;
+    padding: 38px;
+    font-family: 'Modak', cursive;
+    font-weight: 400;
+    font-size: 34px;
+    color: #033D4E;
+    margin-bottom: -36px;
+}
+
+.paragrafo-do-conteudo-secundario {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #033D4E;
+    text-align: center;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.4px solid #A8B7414D;
+    padding: 32px;
+}
+
+.rodape-imagem {
+    margin-right: 12px;
+    border-radius: 20px;
+    transition: all .5s;
+    border: 2px solid transparent;
+}
+
+.rodape-imagem:hover {
+    border: 2px solid #033D4E;
+    border-radius: 15%;
+}
+
+.textos-rodape {
+    font-family: 'Sarala', sans-serif;
+    font-size: 12px;
+    color: #033D4E;
+    width: 350px;
+}
+
+.titulo-do-texto-rodape {
+    font-family: 'Sarala', sans-serif;
+    font-size: 14px;
+}
+
+.icones-rede-sociais {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/* início da responsividade para outros tamanhos de tela */
+
+@media screen and (max-width: 1000px) {
+    .imagens-corpo-principal {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .imagens-corpo-principal {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 300px;
+    }
+    .tamanho-imagens {
+        width: 150px;
+    }
+    .subtitulo-conteudo-principal {
+        text-align: center;
+    }
+    .titulo-do-conteudo-secundario{
+        padding: 27px;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .item-menu-cabecalho {
+        width: 55px;
+    }
+    .imagem-cabecalho {
+        height: 52px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .cabecalho {
+        justify-content: center;
+    }
+    .imagem-cabecalho {
+        height: 0px;
+        width: 0px;
+    }
+}
